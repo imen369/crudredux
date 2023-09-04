@@ -8,6 +8,7 @@ import {delArticle} from "../../../features/articleSlice"
 import {useDispatch} from "react-redux";
 import { MaterialReactTable } from 'material-react-table';
 import { Box } from '@mui/material';
+import EditArticle from './EditArticle';
 const AfficheAerticleTable = () => {
 const dispatch=useDispatch()
 const [showModal, setShowModal] = useState(false);
@@ -124,7 +125,13 @@ return (
 <div>
 <MaterialReactTable columns={columns} data={articles} />;
 </div>
-
+{showModal && (
+<EditArticle
+show={showModal}
+handleClose={handleClose}
+art={selectedItem}
+/>
+)}
 </>
 )
 }
