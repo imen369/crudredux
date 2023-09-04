@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import {getArticles} from "../../../features/articleSlice";
 
 import AfficheAerticleTable from './AfficheAerticleTable';
+import Createarticle from './Createarticle';
 
 const ProductsAppAdmin = () => {
     const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const ProductsAppAdmin = () => {
   return (
     <div>
       <div>
-        
+        <Createarticle/>
         <AfficheAerticleTable />
     </div>
     </div>
